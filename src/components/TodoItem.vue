@@ -4,7 +4,7 @@
 
 
       <label :for="id">
-        <input  type="checkbox" :id="id"   @change="todo.completed = !todo.completed">
+        <input  type="checkbox"   :id="id"  v-model="todo.completed" >
         {{todo.todo}}
       </label>
 

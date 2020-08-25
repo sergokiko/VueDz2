@@ -11,7 +11,7 @@
 
 
     />
-    <button v-on:click="remove"> Remove</button>
+    <button  v-on:click="remove"> Remove</button>
   </div>
 </template>
 
