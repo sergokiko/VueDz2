@@ -1,8 +1,9 @@
 <template>
 
-<li>{{todo}}
-  <button @click="$emit('remove', index)">remove</button>
-</li>
+    <li>
+      <input type="checkbox"  @change="todo.completed = !todo.completed">
+        {{todo.todo}}
+    </li>
 
 </template>
 <script>
@@ -10,7 +11,7 @@ export default {
   name: 'TodoItem',
   props:{
     todo:{
-      type: String,
+      type: Object,
       required:true,
     },
     index:{
@@ -18,5 +19,13 @@ export default {
       required: true
     }
   },
+  methods:{
+    dosomesithg(){
+      console.log(this.todo);
+    }
+  }
 }
 </script>
+<style scoped>
+
+</style>

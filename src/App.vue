@@ -8,8 +8,9 @@
     />
     <TodoList
         :list ="list"
-        @remove="removeItem"
+
     />
+    <button v-on:click="remove"> Remove</button>
   </div>
 </template>
 
@@ -26,18 +27,25 @@ export default {
   data(){
     return{
       message: 'ToDo',
-      list: ['Meting with client', 'Go to gym', 'Visit Mum' ],
+      list: [
+          {todo:'Meting with client', completed: true},
+          {todo:'Go to gym',completed: true},
+          {todo:'Visit Mum',completed: true}
+        ],
       toDo: ''
     }
   },
   methods:{
-    removeItem(index){
-      this.list.splice(index,1)
-    },
     addItem(item){
         this.list.push(item)
+    },
+    remove(){
+      console.log(this.list);
+      this.list = this.list.filter(el => el.completed)
+      console.log(this.list);
     }
   }
+
 }
 </script>
 

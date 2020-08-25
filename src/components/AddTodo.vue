@@ -21,10 +21,13 @@ export default {
   },
   methods:{
     addTodo(){
-      if(this.newTodo.trim()){
-        this.$emit('addToDo', this.newTodo)
+        let  obj = {
+          todo: this.newTodo,
+          completed: true
+        }
+        this.$emit('addToDo', obj)
         this.newTodo = ''
-      }
+
     }
   }
 }

@@ -6,9 +6,10 @@
           :key="i"
           :todo="item"
           :index="i"
-          @remove="removeTodo"
+
       />
     </ul>
+
   </div>
 
 </template>
@@ -26,11 +27,7 @@ export default {
       required:true
     }
   },
-  methods:{
-    removeTodo(index){
-  this.$emit('remove' , index)
-    }
-  }
+
 
 
 }
