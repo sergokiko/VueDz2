@@ -5,8 +5,7 @@
           v-for="(item,i) in list"
           :key="i"
           :todo="item"
-          :index="i"
-
+          :id = "i"
       />
     </ul>
 

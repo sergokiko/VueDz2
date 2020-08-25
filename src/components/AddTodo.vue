@@ -23,7 +23,7 @@ export default {
     addTodo(){
         let  obj = {
           todo: this.newTodo,
-          completed: true
+          completed: false
         }
         this.$emit('addToDo', obj)
         this.newTodo = ''

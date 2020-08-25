@@ -9,6 +9,7 @@
     <TodoList
         :list ="list"
 
+
     />
     <button v-on:click="remove"> Remove</button>
   </div>
@@ -28,9 +29,10 @@ export default {
     return{
       message: 'ToDo',
       list: [
-          {todo:'Meting with client', completed: true},
-          {todo:'Go to gym',completed: true},
-          {todo:'Visit Mum',completed: true}
+          {todo:'Meting with client', completed: false},
+          {todo:'Go to gym',completed: false},
+          {todo:'Visit Mum',completed: false},
+          {todo:'bla bla', completed: false}
         ],
       toDo: ''
     }
@@ -40,9 +42,8 @@ export default {
         this.list.push(item)
     },
     remove(){
-      console.log(this.list);
-      this.list = this.list.filter(el => el.completed)
-      console.log(this.list);
+      this.list = this.list.filter(el => !el.completed)
+
     }
   }
 

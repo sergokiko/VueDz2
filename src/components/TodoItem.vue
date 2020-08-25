@@ -1,8 +1,10 @@
 <template>
 
     <li>
-      <input type="checkbox"  @change="todo.completed = !todo.completed">
-        {{todo.todo}}
+
+
+      <label :for="id"><input  type="checkbox" :id="id"   @change="todo.completed = !todo.completed">{{todo.todo}}</label>
+
     </li>
 
 </template>
@@ -14,16 +16,13 @@ export default {
       type: Object,
       required:true,
     },
-    index:{
+    id:{
       type: Number,
       required: true
     }
+
   },
-  methods:{
-    dosomesithg(){
-      console.log(this.todo);
-    }
-  }
+
 }
 </script>
 <style scoped>
