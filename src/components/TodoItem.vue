@@ -3,7 +3,10 @@
     <li>
 
 
-      <label :for="id"><input  type="checkbox" :id="id"   @change="todo.completed = !todo.completed">{{todo.todo}}</label>
+      <label :for="id">
+        <input  type="checkbox" :id="id"   @change="todo.completed = !todo.completed">
+        {{todo.todo}}
+      </label>
 
     </li>
 
